@@ -1,8 +1,9 @@
 nav {
   height: auto;
   width: 100%;
-  position: relative;
+  position: fixed;
   background-color: #333;
+  top: 0;
   .ham {
     width: 100%;
     height: auto;
@@ -43,6 +44,9 @@ nav {
         color: #fafafa;
         cursor: pointer;
       }
+      .logo {
+        display: none;
+      }
       a {
         display: block;
         height: 45px;
@@ -78,6 +82,14 @@ nav {
         .exit {
           display: none;
         }
+        .logo {
+          display: block;
+          position: absolute;
+          left: 15px;
+          top: 15px;
+          font-size: 32px;
+          color: #fafafa;
+        }
         a {
           width: auto;
           padding: 0 7px 0 7px;
@@ -92,19 +104,6 @@ nav {
         a:nth-of-type(4) {
           margin-right: 10px;
           padding-right: 5px;
-        }
-        a::after {
-          content: '';
-          bottom: 15px;
-          left: 0;
-          position: absolute;
-          width: 0;
-          height: 2px;
-          background-color: #fafafa;
-          transition: .3s;
-        }
-        a:hover::after {
-          width: 100%;
         }
       }
     }
@@ -131,6 +130,14 @@ nav {
         .exit {
           display: none;
         }
+        .logo {
+          display: block;
+          position: absolute;
+          left: 15px;
+          top: 10.5px;
+          font-size: 36px;
+          color: #fafafa;
+        }
         a {
           width: auto;
           padding: 0 10px 0 10px;
@@ -138,26 +145,13 @@ nav {
           display: block;
           height: 100%;
           color: #fafafa;
-          font-size: 26px;
+          font-size: 24px;
           position: relative;
           margin: 0 3px 0 3px;
         }
         a:nth-of-type(4) {
           margin-right: 15px;
           padding-right: 8px;
-        }
-        a::after {
-          content: '';
-          bottom: 15px;
-          left: 0;
-          position: absolute;
-          width: 0;
-          height: 2px;
-          background-color: #fafafa;
-          transition: .3s;
-        }
-        a:hover::after {
-          width: 100%;
         }
       }
     }
@@ -184,6 +178,14 @@ nav {
         .exit {
           display: none;
         }
+        .logo {
+          display: block;
+          position: absolute;
+          left: 15px;
+          top: 12px;
+          font-size: 40px;
+          color: #fafafa;
+        }
         a {
           width: auto;
           padding: 0 12px 0 12px;
@@ -191,7 +193,7 @@ nav {
           display: block;
           height: 100%;
           color: #fafafa;
-          font-size: 28px;
+          font-size: 26px;
           position: relative;
           margin: 0 3px 0 3px;
         }
@@ -199,20 +201,55 @@ nav {
           margin-right: 15px;
           padding-right: 8px;
         }
-        a::after {
-          content: '';
-          bottom: 15px;
-          left: 0;
-          position: absolute;
-          width: 0;
-          height: 2px;
-          background-color: #fafafa;
-          transition: .3s;
-        }
-        a:hover::after {
-          width: 100%;
+      }
+    }
+  }
+}
+@media (min-width: 768px) {
+  nav {
+    top: 0;
+    position: fixed;
+    .nav {
+      background-color: transparent;
+      .buttons {
+        .btn-color {
+          color: #333 !important;
         }
       }
+      .logo-color {
+        color: #333 !important;
+      }
+      .btn-down-line::after {
+        content: '';
+        bottom: 15px;
+        left: 50%;
+        position: absolute;
+        width: 0;
+        height: 2px;
+        background-color: #fafafa;
+        transition: .3s;
+      }
+      .btn-down-line:hover::after {
+        width: 100%;
+        left: 0;
+      }
+      .btn-down-line-color::after {
+        background-color: #333 !important;
+        content: '';
+        bottom: 15px;
+        left: 50%;
+        position: absolute;
+        width: 0;
+        height: 2px;
+        transition: .3s;
+      }
+      .btn-down-line-color:hover::after {
+        width: 100%;
+        left: 0;
+      }
+    }
+    .nav-color {
+      background-color: #fafafa !important;
     }
   }
 }

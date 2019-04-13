@@ -13,8 +13,51 @@ class Nav extends React.Component {
         }));
     }
 
+    componentDidMount() {
+
+
+
+        const nav = document.querySelector('.nav');
+        const btns = document.querySelectorAll('.btn');
+        const logo = document.querySelector('.logo');
+
+        let scrollPosition = window.scrollY;
+
+        function addScroll() {
+            nav.classList.add("nav-color");
+            logo.classList.add("logo-color");
+            for (let i = 0; i < btns.length; i++) {
+                btns[i].classList.add("btn-color");
+                btns[i].classList.add("btn-down-line-color");
+                btns[i].classList.remove("btn-down-line");
+            }
+        }
+        function removeScroll() {
+            nav.classList.remove("nav-color");
+            logo.classList.remove("logo-color");
+            for (let i = 0; i < btns.length; i++) {
+                btns[i].classList.remove("btn-color");
+                btns[i].classList.remove("btn-down-line-color");
+                btns[i].classList.add("btn-down-line");
+            }
+        }
+        window.addEventListener("scroll", function() {
+            scrollPosition = window.scrollY;
+
+            if (scrollPosition > 10) {
+                addScroll();
+            }
+            else {
+                removeScroll();
+            }
+
+        });
+    }
+
+
     render() {
         const { isActive } = this.state;
+
         return (
             <nav>
                 <div className={"ham"}>
@@ -23,10 +66,11 @@ class Nav extends React.Component {
                 <div className={`nav ${isActive ? "nav nav-show" : "nav"}`}>
                     <div className={"buttons"}>
                         <i className="fas fa-times exit" onClick={this.toggleMenu}></i>
-                        <a href="#">home</a>
-                        <a href="#">galeria</a>
-                        <a href="#">cennik</a>
-                        <a href="#">kontakt</a>
+                        <h2 className={"logo"}>HOLIDAY</h2>
+                        <a className={"btn btn-down-line"} href="#">home</a>
+                        <a className={"btn btn-down-line"} href="#">galeria</a>
+                        <a className={"btn btn-down-line"} href="#">cennik</a>
+                        <a className={"btn btn-down-line"} href="#">kontakt</a>
                     </div>
                 </div>
             </nav>
