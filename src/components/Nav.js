@@ -22,6 +22,8 @@ class Nav extends React.Component {
         const logo = document.querySelector('.logo');
 
         let scrollPosition = window.scrollY;
+        let isPosition = false;
+
 
         function addScroll() {
             nav.classList.add("nav-color");
@@ -43,14 +45,8 @@ class Nav extends React.Component {
         }
         window.addEventListener("scroll", function() {
             scrollPosition = window.scrollY;
-
-            if (scrollPosition > 10) {
-                addScroll();
-            }
-            else {
-                removeScroll();
-            }
-
+            scrollPosition > 10 ? isPosition = true : isPosition = false;
+            isPosition === true ? addScroll() : removeScroll();
         });
     }
 
