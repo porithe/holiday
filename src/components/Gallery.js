@@ -20,6 +20,7 @@ class Gallery extends React.Component {
                     <img src={require('../images/room.jpg')}/>
                     <img src={require('../images/room.jpg')}/>
                     <img src={require('../images/room.jpg')}/>
+                    <img src={require('../images/room.jpg')}/>
                 </div>
             </div>
         )

@@ -2,7 +2,9 @@ nav {
   height: auto;
   width: 100%;
   position: fixed;
-  background-color: #333;
+  background-color: #fafafa;
+  box-shadow: 0 0 10px 0;
+  z-index: 11;
   top: 0;
   .ham {
     width: 100%;
@@ -11,7 +13,7 @@ nav {
     justify-content: flex-end;
     .ham-button {
       font-size: 34px;
-      color: #fafafa;
+      color: #333;
       padding: 10px;
       cursor: pointer;
     }
@@ -22,13 +24,14 @@ nav {
   }
   .nav {
     top: 0;
-    left: -100%;
+    left: -120%;
     z-index: 10;
     height: 245px;
     width: 100%;
     position: absolute;
-    background-color: #333;
+    background-color: #fafafa;
     transition: .3s;
+    box-shadow: 0 0 10px 0;
     .buttons {
       padding-top: 55px;
       display: flex;
@@ -41,7 +44,7 @@ nav {
         top: 0;
         padding: 10px;
         font-size: 34px;
-        color: #fafafa;
+        color: #333;
         cursor: pointer;
       }
       .logo {
@@ -53,7 +56,7 @@ nav {
         width: 100%;
         text-align: center;
         line-height: 45px;
-        color: #fafafa;
+        color: #333;
         font-size: 30px;
         text-decoration: none;
         text-transform: uppercase;
@@ -211,6 +214,7 @@ nav {
     position: fixed;
     .nav {
       background-color: transparent;
+
       .buttons {
         .btn-color {
           color: #333 !important;
@@ -250,6 +254,7 @@ nav {
     }
     .nav-color {
       background-color: #fafafa !important;
+      box-shadow: 0 0 10px 0 #333;
     }
   }
 }
