@@ -33,14 +33,14 @@
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .gallery {
-    min-height: calc(100vh - 70px);
+    min-height: auto;
   }
 }
 
 @media (min-width: 1025px) and (max-width: 1280px) {
 
   .gallery {
-    min-height: calc(100vh - 70px);
+    min-height: auto;
   }
 
 }
