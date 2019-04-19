@@ -1,0 +1,155 @@
+.kontakt {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 20px;
+  position: relative;
+  .desktopKontakt {
+    h1 {
+      font-size: 66px;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 400;
+      text-align: center;
+    }
+    .dane {
+      ul li {
+        list-style-type: none;
+        font-size: 22px;
+        text-align: center;
+        font-weight: 300;
+      }
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .kontakt {
+    height: 40vh !important;
+    .desktopKontakt {
+      margin-top: 30px;
+      width: 60%;
+      background-color: #546E7A;
+      height: 300px;
+      border-radius: 25px 0 0 25px;
+      box-shadow: 0 0 30px -5px;
+      position: relative;
+      h1 {
+        position: absolute;
+        color: #fafafa;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 54px;
+      }
+      .dane {
+        width: 100%;
+        position: absolute;
+        top: 90px;
+        left: 50%;
+        transform: translateX(-50%);
+        ul li {
+          color: #fafafa;
+          font-size: 28px;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .kontakt {
+
+    .desktopKontakt {
+      margin-top: 30px;
+      width: 60%;
+      background-color: #546E7A;
+      height: 350px;
+      border-radius: 25px 0 0 25px;
+      box-shadow: 0 0 30px -5px;
+      position: relative;
+      h1 {
+        position: absolute;
+        color: #fafafa;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 70px;
+      }
+      .dane {
+        width: 100%;
+        position: absolute;
+        top: 110px;
+        left: 50%;
+        transform: translateX(-50%);
+        ul li {
+          color: #fafafa;
+          font-size: 34px;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 768px) {
+  .kontakt {
+    height: 50vh;
+    justify-content: center;
+    align-items: flex-start;
+    .desktopKontakt {
+      background-color: #34495e;
+      position: relative;
+      border-radius: 0 25px 25px 0;
+      h1 {
+        position: absolute;
+        color: #fafafa;
+        left: 50%;
+        transform: translateX(-50%);
+        font-weight: 400;
+      }
+      .dane {
+        width: 100%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        ul li {
+          color: #fafafa;
+          padding-bottom: 2px;
+          padding-top: 2px;
+        }
+      }
+    }
+  }
+
+}
+@media (min-width: 1281px) {
+
+  .kontakt {
+    .desktopKontakt {
+      margin-top: 30px;
+      width: 60%;
+      height: 400px;
+      box-shadow: 0 0 30px -5px;
+      position: relative;
+      h1 {
+        position: absolute;
+        color: #fafafa;
+        top: 25px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 86px;
+      }
+      .dane {
+        width: 100%;
+        position: absolute;
+        top: 130px;
+        left: 50%;
+        transform: translateX(-50%);
+        ul li {
+          color: #fafafa;
+          font-size: 40px;
+        }
+      }
+    }
+  }
+
+}

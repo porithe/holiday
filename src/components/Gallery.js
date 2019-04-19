@@ -6,11 +6,12 @@ class Gallery extends React.Component {
     isZoom = false;
 
     zoomImage = (src) => {
-        if (this.isZoom === false) {
+        const widthDevice = window.innerWidth;
+        if (this.isZoom === false && widthDevice > 767) {
             const galleryImages = document.querySelector('.gallery-images');
             let newImg = document.createElement("img");
-            newImg.className = "img-zoom";
             newImg.src = src;
+            newImg.className = "img-zoom";
             newImg.onclick = this.delImage;
             galleryImages.appendChild(newImg);
         }
