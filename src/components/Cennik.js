@@ -4,7 +4,7 @@ import './Cennik.scss';
 function Cennik() {
 
     return (
-        <div className={"cennik"}>
+        <div className={"cennik"} id={"cennik"}>
             <div className="desktop">
                 <h1>Cennik</h1>
                 <div className="ceny">

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './Nav.scss';
+import animateScrollTo from 'animated-scroll-to';
+
 
 class Nav extends React.Component {
 
@@ -11,6 +13,25 @@ class Nav extends React.Component {
         this.setState(prevState => ({
             isActive: !prevState.isActive
         }));
+    }
+
+
+    scrollTo(item) {
+        const widthDevice = window.innerWidth;
+        if (widthDevice > 767) {
+            const nav = document.querySelector('.nav');
+            const block = document.querySelector(item);
+            const navHeight = nav.offsetHeight;
+            const blockHeight = block.offsetTop;
+            animateScrollTo(blockHeight - navHeight)
+        }
+        else {
+            const nav = document.querySelector('nav');
+            const block = document.querySelector(item);
+            const navHeight = nav.offsetHeight;
+            const blockHeight = block.offsetTop;
+            animateScrollTo(blockHeight - navHeight)
+        }
     }
 
     componentDidMount() {
@@ -48,6 +69,7 @@ class Nav extends React.Component {
             scrollPosition > 10 ? isPosition = true : isPosition = false;
             isPosition === true ? addScroll() : removeScroll();
         });
+
     }
 
 
@@ -63,10 +85,11 @@ class Nav extends React.Component {
                     <div className={"buttons"}>
                         <i className="fas fa-times exit" onClick={this.toggleMenu}></i>
                         <h2 className={"logo"}>HOLIDAY</h2>
-                        <a className={"btn btn-down-line"} href="#">home</a>
-                        <a className={"btn btn-down-line"} href="#">galeria</a>
-                        <a className={"btn btn-down-line"} href="#">cennik</a>
-                        <a className={"btn btn-down-line"} href="#">kontakt</a>
+                        <a onClick={ () => this.scrollTo('.header')} className={"btn btn-down-line"} href="#">home</a>
+                        <a onClick={ () => this.scrollTo('.gallery')} className={"btn btn-down-line"} href="#">galeria</a>
+                        <a onClick={ () => this.scrollTo('.cennik')} className={"btn btn-down-line"} href="#">cennik</a>
+
+                        <a onClick={ () => this.scrollTo('.kontakt')} className={"btn btn-down-line"} href="#">kontakt</a>
                     </div>
                 </div>
             </nav>
