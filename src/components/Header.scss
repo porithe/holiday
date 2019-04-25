@@ -1,7 +1,6 @@
 header {
   min-height: calc(100vh);
   background: url("../images/background.png");
-  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -10,6 +9,8 @@ header {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: relative;
+  overflow: hidden;
   .header-text {
     text-align: center;
     padding: 25px;
@@ -33,6 +34,17 @@ header {
         font-size: 28px;
       }
     }
+  }
+}
+@media (min-width: 341px) and (max-width: 376px) {
+  header {
+    background: url("../images/background.png");
+    -webkit-background-position: center;
+    -webkit-background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-position: center;
+    -moz-background-repeat: no-repeat;
+    -moz-background-size: cover;
   }
 }
 @media (min-width: 428px) and (max-width: 480px) {
@@ -107,6 +119,7 @@ header {
 
 @media (min-width: 768px) {
   header {
+    background-attachment: fixed !important;
     height: 100vh;
     .header-text {
 
